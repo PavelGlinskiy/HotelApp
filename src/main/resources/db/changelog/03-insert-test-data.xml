@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="3" author="Pavel Glinskiy">
+
+        <insert tableName="hotels">
+            <column name="name" value="DoubleTree by Hilton Minsk"/>
+            <column name="description" value="Luxury hotel in Minsk"/>
+            <column name="brand" value="Hilton"/>
+
+            <column name="house_number" valueNumeric="9"/>
+            <column name="street" value="Pobediteley Avenue"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220004"/>
+
+            <column name="phone" value="+375 17 309-80-00"/>
+            <column name="email" value="doubletree@hilton.com"/>
+
+            <column name="check_in" value="14:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotels">
+            <column name="name" value="Radisson Blu Moscow"/>
+            <column name="description" value="Business hotel in Moscow"/>
+            <column name="brand" value="Radisson"/>
+
+            <column name="house_number" valueNumeric="1"/>
+            <column name="street" value="Tverskaya Street"/>
+            <column name="city" value="Moscow"/>
+            <column name="country" value="Russia"/>
+            <column name="post_code" value="125009"/>
+
+            <column name="phone" value="+7 495 123-45-67"/>
+            <column name="email" value="info@radisson.ru"/>
+
+            <column name="check_in" value="15:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenities" value="Free WiFi"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenities" value="Free parking"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenities" value="Fitness center"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenities" value="Business center"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
